@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.gameContainer
+{
+    background-image:url('https://shaolinnm.com/images/Index/shaolintemple0-min.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width:100%;
+    height:100vh;
+}
+.dino
+{
+    /*background-image:url('https://media.istockphoto.com/id/502591128/photo/ninja-in-action-with-sword.jpg?s=612x612&w=0&k=20&c=yvi5tgtVAFjzSjGasoqFqM403IbhE0EjScnxgRra7Tg=') ;*/
+    background-image:url('ninja4.png');
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    width:260px;
+    height:300px;
+    position:absolute;
+    bottom:0;
+    left:45vw;
+
+
+}
+.obstacle
+{
+    background-image: url('dino.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:380px;
+    height:350px;
+    position:absolute;
+    bottom:0;
+    left:65vw;
+}
+.animateNinja
+{
+    animation-name:ninja;
+    animation-duration:1s;
+    
+}
+.animateObstacle
+{
+    animation:dino 5s linear infinite;
+    /*animation-duration:1s;*/
+}
+@keyframes ninja
+{
+    0%
+    {
+       bottom:0px;
+    }
+    50%
+    {
+         bottom:460px;
+    }
+    100%
+    {
+        bottom:0px;
+    }
+}
+@keyframes dino
+{
+    0%
+    {
+       left:100vw;
+    }
+    
+    100%
+    {
+        left:-10vw;
+    }
+}
+.gameOver
+{
+   
+    position:relative;
+    top:73px;
+    visibility:hidden;
+    font-size:53px;
+    text-align:center;
+    color: red;
+    font-weight: bold;
+}
+.scoreCount
+{
+   
+    position:absolute;
+    right:45px;
+    top:31px;
+    font-size:33px;
+    border:2px solid rgb(92, 11, 241);
+    border-radius:4px;
+    color: rgb(50, 57, 249);
+    font-weight: bold;
+    padding:2px;
+}
